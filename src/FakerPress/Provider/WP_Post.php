@@ -86,7 +86,7 @@ class WP_Post extends Base {
 			$content = implode( "\r\n\r\n", $this->generator->paragraphs( make( Utils::class )->get_qty_from_range( $args['qty'] ) ) );
 		}
 
-		return $content;
+		return apply_filters( 'fakerpress_post_content', $content );
 	}
 
 	/**

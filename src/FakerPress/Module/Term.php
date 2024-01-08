@@ -105,7 +105,7 @@ class Term extends Abstract_Module {
 			return esc_attr__( 'Zero is not a good number of terms to fake...', 'fakerpress' );
 		}
 
-		$name_size = get_request_var( [ Plugin::$slug, 'size' ] );
+		$name_size = get( $request,'size' );
 
 		// Fetch taxomies
 		$taxonomies = get( $request, 'taxonomies' );
